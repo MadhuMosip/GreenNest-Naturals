@@ -64,7 +64,7 @@ const Products = () => {
             </div>
             <div className="bg-[#ffffff] shadow rounded-lg py-6 px-8 mb-8">
                 <div className="mb-5 flex justify-between">
-                    <input onChange={handleInputSearch} className="outline-0 border-1 h-[46px] px-4 w-full mr-4 border-[#23262A] bg-[#fefcf6] rounded-lg " placeholder="Search Products..." />
+                    <input onChange={handleInputSearch} className="outline-0 border-1 h-[46px] px-4 w-full mr-4 border-gray-300 bg-[#fefcf6] rounded-lg " placeholder="Search Products..." />
                     <button onClick={handleSearchBtn} className="rounded-xl h-[46px] px-6 cursor-pointer text-[#ffffff] bg-[#81ab45] hover:bg-[#658a34]">Search</button>
                 </div>
                 <div className="bg-[#e9ece8] rounded-2xl px-1 py-2 flex justify-between gap-2 w-full ">

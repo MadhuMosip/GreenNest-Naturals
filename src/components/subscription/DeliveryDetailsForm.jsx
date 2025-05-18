@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { CalendarIcon } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import { toast } from 'sonner';

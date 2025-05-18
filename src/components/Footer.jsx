@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#f4f7ed] border-t border-nature-100">
+        <footer className="bg-[#f4f7ed]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
-                        <h3 className="text-lg font-serif font-semibold text-gray-900 mb-4">GreenNest Naturals</h3>
-                        <p className="text-gray-600 mb-4">
+                        <h3 className="text-xl font-serif font-semibold text-gray-900 mb-4">GreenNest Naturals</h3>
+                        <p className="text-gray-600 mb-4 text-lg">
                             Delivering farm-fresh organic products directly from our farms to your doorstep.
                         </p>
                     </div>
                     <div>
-                        <h3 className="text-lg font-serif font-semibold text-gray-900 mb-4">Quick Links</h3>
-                        <ul className="space-y-2">
+                        <h3 className="text-xl font-serif font-semibold text-gray-900 mb-4">Quick Links</h3>
+                        <ul className="space-y-2 text-lg">
                             <li>
                                 <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Home</Link>
                             </li>
@@ -29,8 +29,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-lg font-serif font-semibold text-gray-900 mb-4">Products</h3>
-                        <ul className="space-y-2">
+                        <h3 className="text-xl font-serif font-semibold text-gray-900 mb-4">Products</h3>
+                        <ul className="space-y-2 text-lg">
                             <li>
                                 <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Dairy Products</Link>
                             </li>
@@ -46,8 +46,8 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-lg font-serif font-semibold text-gray-900 mb-4">Contact Us</h3>
-                        <address className="not-italic text-gray-600">
+                        <h3 className="text-xl font-serif font-semibold text-gray-900 mb-4">Contact Us</h3>
+                        <address className="not-italic text-gray-600 text-lg">
                             <p>123 Farm Road,</p>
                             <p>Organic Valley, OV 54321</p>
                             <p className="mt-3">Phone: (555) 123-4567</p>
@@ -55,8 +55,8 @@ const Footer = () => {
                         </address>
                     </div>
                 </div>
-                <div className="border-t border-nature-200 mt-8 pt-8">
-                    <p className="text-center text-gray-500 text-sm">
+                <div className="border-t border-[#d3e0b9] mt-8 pt-8">
+                    <p className="text-center text-gray-500 text-md">
                         &copy; {new Date().getFullYear()} GreenNest Naturals. All rights reserved.
                     </p>
                 </div>
