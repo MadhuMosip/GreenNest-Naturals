@@ -1,7 +1,7 @@
 import { pricingPlans } from '../data/priceplans';
 import ChoosePlan from '../components/subscription/ChoosePlan';
 import { useState } from 'react';
-import SelectProduct from '../components/subscription/selectProduct';
+import SelectProduct from '../components/subscription/SelectProduct';
 import DeliveryDetailsForm from '../components/subscription/DeliveryDetailsForm';
 
 
