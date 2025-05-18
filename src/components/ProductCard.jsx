@@ -1,4 +1,12 @@
-const ProductCard = ({product}) => {
+import { useCart } from '../context/cartContext'
+
+const ProductCard = ({ product }) => {
+     const { addToCart } = useCart();
+
+    const addItemToCart = (id) => {
+        addToCart(id);
+    };
+
     return (
         <div key={product.id} className='rounded-xl relative' style={{ boxShadow: "0 -4px 10px rgba(0,0,0,0.05), 0 4px 10px rgba(0,0,0,0.05)" }}>
             <div className='h-[210px]'>
@@ -11,8 +19,8 @@ const ProductCard = ({product}) => {
                 <p className='text-sm text-gray-600'>{product.description}</p>
 
                 <div className='mt-auto flex justify-between items-center'>
-                    <span className='text-[#3a5123] text-lg font-semibold'>{product.price}</span>
-                    <button className='border border-[#81ab45] bg-[#f4f7ed] hover:bg-[#e9f0dc] cursor-pointer px-3 py-2 w-[80px] rounded-xl text-[#81ab45] flex justify-between font-semibold'>
+                    <span className='text-[#3a5123] text-lg font-semibold'>${product.price}</span>
+                    <button onClick={() => addItemToCart(product.id)} className='border border-[#81ab45] bg-[#f4f7ed] hover:bg-[#e9f0dc] cursor-pointer px-3 py-2 w-[80px] rounded-xl text-[#81ab45] flex justify-between font-semibold'>
                         <span>+</span> Add
                     </button>
                 </div>

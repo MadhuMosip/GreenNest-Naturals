@@ -1,9 +1,18 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useCart } from "../context/cartContext";
+import { Link } from "react-router";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
+    const { cartItems } = useCart();
+
+
+    const getTotalQuantity = (cartItems) => {
+        return Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
+    };
+    const totalQuantity = getTotalQuantity(cartItems);
 
     return (
         <nav className="sticky top-0 z-50">
@@ -18,12 +27,18 @@ const Navbar = () => {
                     <a href="/contact" className={`${location.pathname === '/contact' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Contact</a>
                 </div>
                 <div className="flex items-center">
-                    <svg className="w-6 h-6 text-[#4B682A]" fill="none" stroke="currentColor" strokeWidth={2}
-                        viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="9" cy="21" r="1" />
-                        <circle cx="20" cy="21" r="1" />
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                    </svg>
+                    <Link to="/cart" className="relative cursor-pointer">
+                        <svg className="w-6 h-6 text-[#4B682A]" fill="none" stroke="currentColor" strokeWidth={2}
+                            viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+
+                        {totalQuantity > 0 && <div className="absolute -top-2 -right-2 bg-[#81AB45] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                            {totalQuantity}
+                        </div>}
+                    </Link>
                     <a href="#" className="ml-5 px-4 py-3 bg-[#81AB45] hover:bg-[#4B682A] text-white font-bold rounded-xl text-md hidden min-[900px]:flex">Subscribe Now</a>
                     <div className="min-[900px]:hidden ml-5">
                         <button className="items-center flex cursor-pointer" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>

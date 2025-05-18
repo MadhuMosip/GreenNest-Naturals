@@ -10,8 +10,8 @@ const HeroSection = () => {
                 </h1>
                 <p className="text-gray-600 text-xl mb-8 mx-auto">Experience the true taste of nature with our premium organic milk, oils, country chicken, and eggs.</p>
                 <div className="flex gap-3 flex-wrap justify-center">
-                    <a href="" className="text-[#ffffff] text-lg flex items-center bg-[#509550] hover:bg-[#3f7a3f] py-2 px-4 h-[50px] rounded-lg">Subscribe Now</a>
-                    <a href="" className="text-[#ffffff] text-lg flex items-center bg-[#509550] hover:bg-[#3f7a3f] py-2 px-4 h-[50px] rounded-lg">Explore Products</a>
+                    <a href="/subscription" className="text-[#ffffff] text-lg flex items-center bg-[#509550] hover:bg-[#3f7a3f] py-2 px-4 h-[50px] rounded-lg">Subscribe Now</a>
+                    <a href="/products" className="text-[#ffffff] text-lg flex items-center bg-[#509550] hover:bg-[#3f7a3f] py-2 px-4 h-[50px] rounded-lg">Explore Products</a>
                 </div>
             </div>
             <div className="px-10 min-[900px]:px-6">
