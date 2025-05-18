@@ -1,8 +1,10 @@
 import { useState } from "react";
-
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    console.log(location.pathname)
 
     return (
         <nav className="sticky top-0 z-50">
@@ -10,11 +12,11 @@ const Navbar = () => {
                 <div>
                     <span className="font-serif font-bold text-[#4B682A] text-3xl max-[500px]:text-xl">GreenNest Naturals</span>
                 </div>
-                <div className="gap-3 hidden min-[900px]:flex">
-                    <a href="#" className="text-[#4B682A] font-semibold text-[18px]">Home</a>
-                    <a href="#" className="text-[#4B5563] text-[18px]" >Products</a>
-                    <a href="#" className="text-[#4B5563] text-[18px]">Subscription</a>
-                    <a href="#" className="text-[#4B5563] text-[18px]">Contact</a>
+                <div className="gap-4 hidden min-[900px]:flex">
+                    <a href="/" className={`${location.pathname === '/' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Home</a>
+                    <a href="/products" className={`${location.pathname === '/products' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`} >Products</a>
+                    <a href="/subscription" className={`${location.pathname === '/subscription' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Subscription</a>
+                    <a href="/contact" className={`${location.pathname === '/contact' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Contact</a>
                 </div>
                 <div className="flex items-center">
                     <svg className="w-6 h-6 text-[#4B682A]" fill="none" stroke="currentColor" strokeWidth={2}
