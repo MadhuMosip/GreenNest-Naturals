@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
-    console.log(location.pathname)
 
     return (
         <nav className="sticky top-0 z-50">
