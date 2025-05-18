@@ -68,7 +68,7 @@ const Testimonials = () => {
                                 </div>
                                 <p className="text-gray-700 italic mb-6">{item.content}</p>
                                 <div className="flex items-center space-x-3">
-                                    <img src={item.avatar} alt="User" className="w-10 h-10 rounded-full" />
+                                    <img src={item.avatar} alt="User" className="w-10 h-10 rounded-full object-cover" />
                                     <div>
                                         <p className="text-sm font-semibold text-gray-900">{item.name}</p>
                                         <p className="text-sm text-gray-500">{item.role}</p>

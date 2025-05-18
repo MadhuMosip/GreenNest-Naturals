@@ -1,18 +1,25 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cartContext";
 import { Link } from "react-router";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const { cartItems } = useCart();
+    const [selectdPath, getSelectdPath] = useState("/")
 
 
     const getTotalQuantity = (cartItems) => {
         return Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
     };
     const totalQuantity = getTotalQuantity(cartItems);
+
+    const handleDropdownVal = (path) => {
+        getSelectdPath(path); 
+        setMobileMenuOpen(false);
+    }
 
     return (
         <nav className="sticky top-0 z-50">
@@ -57,13 +64,13 @@ const Navbar = () => {
             </div>
             {isMobileMenuOpen && (
                 <div className="absolute top-16 left-0 w-full z-50 min-[900px]:hidden mt-4 space-y-1 text-gray-700 font-medium shadow-md bg-white px-6 pb-4">
-                    <a href="#" className="block text-lg font-semibold bg-[#F4F7ED] text-[#4B682A] px-3 py-3 rounded-xl">Home</a>
-                    <a href="#" className="block text-lg px-3 py-3 rounded-xl hover:bg-[#F4F7ED]">Products</a>
-                    <a href="#" className="block text-lg px-3 py-3 rounded-xl hover:bg-[#F4F7ED]">Subscription</a>
-                    <a href="#" className="block text-lg px-3 py-3 rounded-xl hover:bg-[#F4F7ED]">Contact</a>
-                    <div className="flex text-lg items-center space-x-4 mt-2 w-full">
-                        <a href="#" className="py-2 bg-[#81AB45] hover:bg-[#4B682A] text-center text-white h-[50px] font-bold w-full rounded-[14px]">Subscribe Now</a>
-                    </div>
+                    <Link to="/" onClick={() => handleDropdownVal("/")} className={`${selectdPath === '/' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg  px-3 py-3 rounded-xl`}>Home</Link>
+                    <Link to="/products" onClick={() => handleDropdownVal("/products") } className={`${selectdPath === '/products' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg  px-3 py-3 rounded-xl`}>Products</Link>
+                    <Link to="/subscription" onClick={() => handleDropdownVal("/subscription")} className={`${selectdPath === '/subscription' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg  px-3 py-3 rounded-xl`}>Subscription</Link>
+                    <Link to="/contact" onClick={() => handleDropdownVal("/contact")} className={`${selectdPath === '/contact' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg px-3 py-3 rounded-xl`}>Contact</Link>
+                    <Link to="/subscription" onClick={() => handleDropdownVal("/subscription")} className="flex text-lg items-center space-x-4 mt-2 w-full">
+                        <div className="py-2 bg-[#81AB45] hover:bg-[#4B682A] text-center text-white h-[50px] font-bold w-full rounded-[14px]">Subscribe Now</div>
+                    </Link>
                 </div>
             )}
         </nav>

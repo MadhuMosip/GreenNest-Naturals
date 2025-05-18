@@ -1,4 +1,5 @@
 import { Leaf } from "lucide-react";
+import { Link } from "react-router";
 
 const StorySetion = () => {
     return (
@@ -9,7 +10,7 @@ const StorySetion = () => {
                     <h2 className="text-base-900 font-serif text-3xl font-bold mb-4">From Our Farm to Your Table</h2>
                     <p className="mb-6 text-gray-600 text-lg">At GreenNest Naturals, we believe that the quality of food directly impacts the quality of life. Our journey began 15 years ago with a small family farm and a big vision: to bring truly organic products to health-conscious families.</p>
                     <p className="mb-6 text-gray-600 text-lg">We maintain sustainable farming practices, treat our animals with care and respect, and ensure that every product meets the highest organic standards. Our milk comes from grass-fed cows, our oils are cold-pressed, and our chickens are raised in a free-range environment.</p>
-                    <button className="text-[#ffffff] rounded-xl bg-[#509550] h-[50px] px-4 cursor-pointer">Learn More About Us</button>
+                    <button className="text-[#ffffff] rounded-xl bg-[#509550] h-[50px] px-4 cursor-pointer"><Link to="/contact">Learn More About Us</Link></button>
                 </div>
                 <div className="flex flex-col justify-center order-1 lg:order-2">
                     <div className="shadow py-4 px-6 flex items-center gap-4 rounded-xl max-w-xs">

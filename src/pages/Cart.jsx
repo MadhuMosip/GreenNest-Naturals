@@ -67,7 +67,7 @@ const Cart = () => {
                                     <img
                                         src={item.image}
                                         alt={item.name}
-                                        className="w-12 h-12 object-cover"
+                                        className="w-12 h-12 rounded-lg object-cover"
                                     />
                                     <div>
                                         <p className="font-medium text-lg text-gray-900">{item.name}</p>

@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { productsList } from "../data/products";
 import ProductCard from "../components/ProductCard";
+import { useSearchParams } from 'react-router-dom';
 
 const Products = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [products, setProducts] = useState(productsList ? productsList : []);
     const [inputSearch, setInputSearch] = useState("");
+    const [searchParams] = useSearchParams();
+    const category = searchParams.get('category');
+
+    useEffect(() => {
+        if (category){
+            setActiveCategory(category);
+            handleCategory(category);
+        }
+    }, []);
 
     const categories = [
         { id: 'all', label: 'All Products' },
@@ -47,7 +57,7 @@ const Products = () => {
 
     const handleCategory = (category) => {
         setActiveCategory(category);
-        if(category === "all"){
+        if (category === "all") {
             setProducts(productsList);
             return
         }

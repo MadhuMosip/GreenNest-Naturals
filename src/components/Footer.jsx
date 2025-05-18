@@ -15,16 +15,16 @@ const Footer = () => {
                         <h3 className="text-xl font-serif font-semibold text-gray-900 mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-lg">
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Home</Link>
+                                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Home</Link>
                             </li>
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Products</Link>
+                                <Link to="/products" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Products</Link>
                             </li>
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Subscription</Link>
+                                <Link to="/subscription" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Subscription</Link>
                             </li>
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Contact Us</Link>
+                                <Link to="/contact" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Contact Us</Link>
                             </li>
                         </ul>
                     </div>
@@ -32,16 +32,16 @@ const Footer = () => {
                         <h3 className="text-xl font-serif font-semibold text-gray-900 mb-4">Products</h3>
                         <ul className="space-y-2 text-lg">
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Dairy Products</Link>
+                                <Link to="/products?category=dairy" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Dairy Products</Link>
                             </li>
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Cooking Oils</Link>
+                                <Link to="/products?category=oils" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Cooking Oils</Link>
                             </li>
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Country Chicken</Link>
+                                <Link to="/products?category=meat" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Country Chicken</Link>
                             </li>
                             <li>
-                                <Link to="" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Farm Fresh Eggs</Link>
+                                <Link to="/products?category=eggs" className="text-gray-600 hover:text-nature-600 transition-colors duration-200">Farm Fresh Eggs</Link>
                             </li>
                         </ul>
                     </div>

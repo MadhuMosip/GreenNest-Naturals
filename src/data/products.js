@@ -4,7 +4,7 @@ export const productsList = [
     name: "Organic A2 Milk",
     category: "dairy",
     price: 4.99,
-    image: "/products/milk.jpg",
+    image: "assets/images/milk1.jpg",
     description:
       "Fresh organic A2 milk from grass-fed cows, rich in nutrients and natural goodness.",
     isPopular: true,
@@ -16,7 +16,7 @@ export const productsList = [
     name: "Natural Yogurt",
     category: "dairy",
     price: 3.49,
-    image: "/products/yogurt.jpg",
+    image: "assets/images/milk-2.jpg",
     description: "Creamy, probiotic-rich yogurt made from our organic milk.",
     isOrganic: true,
     unit: "500g"
@@ -26,7 +26,7 @@ export const productsList = [
     name: "Organic Ghee",
     category: "dairy",
     price: 9.99,
-    image: "/products/ghee.jpg",
+    image: "assets/images/ghee.jpg",
     description:
       "Pure clarified butter made from organic milk, ideal for cooking and traditional recipes.",
     isPopular: true,
@@ -38,7 +38,7 @@ export const productsList = [
     name: "Cold-Pressed Coconut Oil",
     category: "oils",
     price: 7.99,
-    image: "/products/coconut-oil.jpg",
+    image: "assets/images/coconut-oil.jpg",
     description:
       "Unrefined, cold-pressed coconut oil rich in medium-chain fatty acids.",
     isOrganic: true,
@@ -49,7 +49,7 @@ export const productsList = [
     name: "Extra Virgin Olive Oil",
     category: "oils",
     price: 12.99,
-    image: "/products/olive-oil.jpg",
+    image: "assets/images/olive-oil.jpg",
     description: "Premium cold-pressed extra virgin olive oil from organic farms.",
     isOrganic: true,
     unit: "750ml"
@@ -59,7 +59,7 @@ export const productsList = [
     name: "Country Chicken",
     category: "meat",
     price: 8.99,
-    image: "/products/chicken.jpg",
+    image: "assets/images/chicken.jpg",
     description:
       "Free-range country chicken raised without antibiotics or hormones.",
     isPopular: true,
@@ -71,7 +71,7 @@ export const productsList = [
     name: "Organic Eggs",
     category: "eggs",
     price: 4.49,
-    image: "/products/eggs.jpg",
+    image: "assets/images/chicken-eggs.jpg",
     description: "Farm-fresh eggs from free-range hens fed with organic feed.",
     isOrganic: true,
     unit: "6 pcs"
@@ -81,7 +81,7 @@ export const productsList = [
     name: "Grass-Fed Butter",
     category: "dairy",
     price: 5.99,
-    image: "/products/butter.jpg",
+    image: "assets/images/butter.jpg",
     description: "Rich and creamy butter from grass-fed cows.",
     isOrganic: true,
     unit: "200g"
@@ -91,7 +91,7 @@ export const productsList = [
     name: "Mustard Oil",
     category: "oils",
     price: 6.99,
-    image: "/products/mustard-oil.jpg",
+    image: "assets/images/mustard-oil.jpg",
     description: "Traditional cold-pressed mustard oil with authentic flavor.",
     isOrganic: true,
     unit: "500ml"
@@ -101,7 +101,7 @@ export const productsList = [
     name: "Quail Eggs",
     category: "eggs",
     price: 5.99,
-    image: "/products/quail-eggs.jpg",
+    image: "assets/images/quailegg.jpg",
     description: "Nutritious and delicate quail eggs from our organic farm.",
     isOrganic: true,
     unit: "12 pcs"
