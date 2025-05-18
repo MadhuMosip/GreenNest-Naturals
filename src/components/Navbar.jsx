@@ -28,10 +28,10 @@ const Navbar = () => {
                     <span className="font-serif font-bold text-[#4B682A] text-3xl max-[500px]:text-xl">GreenNest Naturals</span>
                 </div>
                 <div className="gap-4 hidden min-[900px]:flex">
-                    <a href="/" className={`${location.pathname === '/' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Home</a>
-                    <a href="/products" className={`${location.pathname === '/products' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`} >Products</a>
-                    <a href="/subscription" className={`${location.pathname === '/subscription' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Subscription</a>
-                    <a href="/contact" className={`${location.pathname === '/contact' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Contact</a>
+                    <Link to="/" className={`${location.pathname === '/' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Home</Link>
+                    <Link to="/products" className={`${location.pathname === '/products' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`} >Products</Link>
+                    <Link to="/subscription" className={`${location.pathname === '/subscription' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Subscription</Link>
+                    <Link to="/contact" className={`${location.pathname === '/contact' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Contact</Link>
                 </div>
                 <div className="flex items-center">
                     <Link to="/cart" className="relative cursor-pointer">
