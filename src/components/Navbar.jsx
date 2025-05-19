@@ -46,7 +46,7 @@ const Navbar = () => {
                             {totalQuantity}
                         </div>}
                     </Link>
-                    <a href="#" className="ml-5 px-4 py-3 bg-[#81AB45] hover:bg-[#4B682A] text-white font-bold rounded-xl text-md hidden min-[900px]:flex">Subscribe Now</a>
+                    <Link to="/subscription" className="ml-5 px-4 py-3 bg-[#81AB45] hover:bg-[#4B682A] text-white font-bold rounded-xl text-md hidden min-[900px]:flex">Subscribe Now</Link>
                     <div className="min-[900px]:hidden ml-5">
                         <button className="items-center flex cursor-pointer" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
                             {!isMobileMenuOpen && <svg className="w-6 h-6 text-[#4B682A]" fill="none" stroke="currentColor" strokeWidth={2}

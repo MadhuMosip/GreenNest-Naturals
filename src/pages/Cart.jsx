@@ -135,7 +135,7 @@ const Cart = () => {
                             <CreditCard /> Checkout Now
                         </button>
 
-                        <Link to="/productss" className="w-full cursor-pointer text-lg text-[#4B682A] flex items-center justify-center gap-2 font-medium hover:underline">
+                        <Link to="/products" className="w-full cursor-pointer text-lg text-[#4B682A] flex items-center justify-center gap-2 font-medium hover:underline">
                             ←  Continue Shopping
                         </Link>
                     </div>
