@@ -77,7 +77,7 @@ const Products = () => {
                     <input onChange={handleInputSearch} className="outline-0 border-1 h-[46px] px-4 w-full mr-4 border-gray-300 bg-[#fefcf6] rounded-lg " placeholder="Search Products..." />
                     <button onClick={handleSearchBtn} className="rounded-xl h-[46px] px-6 cursor-pointer text-[#ffffff] bg-[#81ab45] hover:bg-[#658a34]">Search</button>
                 </div>
-                <div className="bg-[#e9ece8] rounded-2xl px-1 py-2 flex justify-between gap-2 w-full ">
+                <div className="bg-[#e9ece8] rounded-2xl px-1 py-2 flex justify-between flex-wrap max-[508px]:justify-center gap-2 w-full ">
                     {categories.map((cat) => (
                         <button
                             key={cat.id}
