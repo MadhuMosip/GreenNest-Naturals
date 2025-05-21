@@ -48,7 +48,7 @@ const Testimonials = () => {
                     <h5 className="text-[#658a34] text-xl mb-4">Testimonials</h5>
                     <h2 className="text-base-900 font-serif text-4xl font-bold mb-4">What Our Customers Say</h2>
                 </div>
-                <div className="flex items-center px-6 justify-center gap-10">
+                <div className="flex items-center px-6 max-md:px-0 justify-center gap-10 max-md:gap-2">
                     <ArrowLeft
                         onClick={prev}
                         className={`h-14 w-14 p-4 rounded-full shadow cursor-pointer ${!canGoPrev ? 'opacity-30 cursor-not-allowed' : ''}`}

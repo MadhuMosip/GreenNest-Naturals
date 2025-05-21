@@ -55,15 +55,15 @@ const Cart = () => {
     return (
         <div className="bg-[#fefcf6] rounded-xl px-6 py-10 flex items-center justify-center flex-col" >
             {!transactionComplated && <><h2 className="text-4xl font-serif font-bold text-gray-800 mb-2">Your Cart</h2>
-                <div className="flex flex-col lg:flex-row gap-6 w-full px-20">
+                <div className="flex flex-col lg:flex-row gap-6 w-full px-20 max-md:px-0">
                     <div className="bg-white shadow rounded-xl p-6 flex-1 w-full">
                         <h3 className="text-2xl font-medium mb-4 text-gray-800">
                             Shopping Cart ({totalQuantity} items)
                         </h3>
                         <hr className="text-[#d3e0b9]" />
                         {addCartList.length > 0 && addCartList.map((item) => (
-                            <div key={item.id} className="flex items-center justify-between py-4 border-b w-full">
-                                <div className="flex items-center gap-4">
+                            <div key={item.id} className="flex items-center max-[500px]:flex-col justify-between py-4 border-b w-full">
+                                <div className="flex items-center gap-4 max-[500px]:justify-between w-full">
                                     <img
                                         src={item.image}
                                         alt={item.name}
@@ -75,7 +75,7 @@ const Cart = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 max-[500px]:justify-between w-full">
                                     <div className="flex items-center border rounded-full overflow-hidden">
                                         <button
                                             className="px-2 py-1 text-lg cursor-pointer"
